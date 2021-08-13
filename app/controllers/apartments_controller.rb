@@ -46,6 +46,6 @@ class ApartmentsController < ApplicationController
     end
 
     def render_unpermitted_params_response
-        render json: { "Unpermitted Parameters": params.to_unsafe_h.except(:controller, :action, :id)}, status: :unprocessable_entity
+        render json: { "Unpermitted Parameters": params.to_unsafe_h.except(:controller, :action, :id, :number)}, status: :unprocessable_entity
     end
 end
